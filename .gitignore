@@ -1,0 +1,12 @@
+# Environment
+.venv
+venv
+env.py
+
+# node.js
+node_modules/
+# Python
+__pycache__/
+
+# local files
+test.py
