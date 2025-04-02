@@ -3,12 +3,72 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="css/style.css">
+    <!-- Stylesheet link -->
+    <link rel="stylesheet" href="./css/style.css">
+    <!-- Favicon links -->
+    <link rel="icon" href="../assets/images/favicon_io/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="../assets/images/favicon_io/favicon-32x32.png" sizes="32x32">
+    <link rel="apple-touch-icon" href="../assets/images/favicon_io/favicon-16x16.png" sizes="16x16">
+    <title>Portfolio</title>
+    
 </head>
-<body>
-    <div class="bg-blue-500 text-white p-4">
-        Hello, Tailwind!
-    </div>
+<body class="font-[Poppins] bg-gradient-to-t from-[#fbc2eb] to-[#0d64fa] h-screen">
+    <header class="bg-white">
+        <!-- Navbar -->
+        <nav class="flex mt-0 justify-between items-center w-[100%] bg-gray-50 mx-auto">
+            <div class="bg-gray-50 z-10 relative w-full">
+                <a href="#" class="text-2xl font-bold text-[#0d64fa]">
+                    <img class="w-10 m-2" src="../assets/images/logo_t.png" alt="logo">
+                </a>
+            </div>
+            <div class="nav-links duration-1000 md:static absolute bg-gray-50 md:min-h-fit min-h-[40vh] left-0 md:w-auto w-full flex items-center px-5 top-[-100%] z-0">
+                <ul class="flex md:flex-row flex-col md:items-center md:gap-[4vw] gap-8">
+                    <li>
+                        <a class="hover:text-gray-500" href="#">Summary</a>
+                    </li>
+                    <li>
+                        <a class="hover:text-gray-500" href="#">Education</a>
+                    </li>
+                    <li>
+                        <a class="hover:text-gray-500" href="#">Skills</a>
+                    </li>
+                    <li>
+                        <a class="hover:text-gray-500" href="#">Experience</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="flex items-center gap-6">
+                <!-- <button class="bg-[#0d64fa] text-white px-5 py-2 rounded-full hover:bg-[#28349a]">Sign in</button> -->
+                <ion-icon onclick="onToggleMenu(this)" name="menu" class="text-3xl cursor-pointer md:hidden m-2"></ion-icon>
+            </div>
+        </nav>
+    </header>
+    <h1 class="p-3 bg-yellow-200">Portfolio</h1>
+        <!-- Summary -->
+        <section class="p-3 flex bg-yellow-50">
+            <div class="w-full">
+                <h2 class="p-3">Summary:</h2>
+            </div>
+        </section>
+    <section class="p-3 flex justify-center bg-yellow-100">
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rerum dolorum consectetur natus nulla blanditiis ut ullam. Autem inventore natus quo, tempore in rerum iusto pariatur perferendis. Inventore eum delectus rerum.</p>
+    </section>
+    <script>
+        const navLinks = document.querySelector('.nav-links');
+        // Function to toggle the menu icon and the navigation links
+        function onToggleMenu(e){
+            // Toggle the menu icon between 'menu' and 'close'
+            e.name = e.name === 'menu' ? 'close' : 'menu';
+            if (navLinks.classList.contains('top-[-100%]')) {
+                navLinks.classList.remove('top-[-100%]');
+                navLinks.classList.add('top-[4%]');
+            } else {
+                navLinks.classList.remove('top-[4%]');
+                navLinks.classList.add('top-[-100%]');
+            }
+        }
+    </script>
+    <script type="module" src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule="" src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons/ionicons.js"></script>
 </body>
 </html>
